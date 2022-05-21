@@ -10,6 +10,8 @@ import { CustomThemeProvider } from "@/contexts/userTheme";
 import { Provider } from "react-redux"
 import store from "@/state/index"
 import AppUpdater from "@/state/app/updater"
+import { Web3ReactProvider } from '@web3-react/core'
+import { Web3Provider } from "@ethersproject/providers";
 
 function Updaters() {
   return (
@@ -17,6 +19,10 @@ function Updaters() {
       <AppUpdater />
     </>
   )
+}
+
+function getLibrary(provider) {
+  return new Web3Provider(provider);
 }
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
@@ -42,11 +48,13 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
           >
             <Updaters/>
             <ApolloProvider client={client}>
+            <Web3ReactProvider getLibrary={getLibrary}>
               <div suppressHydrationWarning>
                 {typeof window === "undefined" ? null : (
                   <Component {...pageProps} />
                 )}
               </div>
+              </Web3ReactProvider>
             </ApolloProvider>
           </SnackbarProvider>
         </ContractKitProvider>

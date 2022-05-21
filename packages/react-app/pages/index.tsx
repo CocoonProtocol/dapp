@@ -1,9 +1,13 @@
+// @ts-nocheck
 import * as React from "react";
 import { Tabs, Tab, Typography, Box } from "@mui/material";
 import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
 import { StorageContract, GreeterContract, AccountInfo, Polling } from "@/components";
 import AppLayout from "@/components/layout/AppLayout";
+import { useRouter } from 'next/router'
+
+
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -12,6 +16,7 @@ interface TabPanelProps {
 }
 
 export default function App() {
+  const router = useRouter()
   const { network } = useContractKit();
   const [value, setValue] = React.useState(0);
 
@@ -24,6 +29,7 @@ export default function App() {
       network?.name?.toLocaleLowerCase()
     ]?.contracts;
 
+
   return (
     <AppLayout title="Celo Starter" description="Celo Starter">
       <Box sx={{ width: "100%" }}>
@@ -32,6 +38,7 @@ export default function App() {
             <Tab label="Account" {...a11yProps(0)} />
             <Tab label="Storage" {...a11yProps(1)} />
             <Tab label="Greeter" {...a11yProps(2)} />
+            {/* <Tab label="Wallet" {...a11yProps(3)} /> */}
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -43,7 +50,13 @@ export default function App() {
         <TabPanel value={value} index={2}>
           <GreeterContract contractData={contracts?.Greeter} />
         </TabPanel>
+        {/* <TabPanel value={value} index={3}>
+          <Wallet></Wallet>
+        </TabPanel> */}
       </Box>
+      <button type="button" onClick={() => router.push('/cocoon')}>
+      Click me
+    </button>
       <Polling/>
     </AppLayout>
   );

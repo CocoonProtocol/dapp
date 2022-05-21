@@ -16,6 +16,7 @@ module.exports = withPWA({
       child_process: false,
       readline: false,
     };
+    // config.experiments = {topLevelAwait: true}
     return config;
   },
 })
