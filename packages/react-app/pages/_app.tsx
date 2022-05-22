@@ -11,8 +11,10 @@ import { Provider } from "react-redux"
 import store from "@/state/index"
 import AppUpdater from "@/state/app/updater"
 import { Web3ReactProvider } from '@web3-react/core'
+import { ethers } from "ethers";
 import { Web3Provider } from "@ethersproject/providers";
 import '../public/styles.css'
+
 
 function Updaters() {
   return (
@@ -22,9 +24,11 @@ function Updaters() {
   )
 }
 
-function getLibrary(provider) {
-  return new Web3Provider(provider);
-}
+const getLibrary = (provider) => {
+  const library = new ethers.providers.Web3Provider(provider);
+  library.pollingInterval = 8000; // frequency provider is polling
+  return library;
+};
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return (

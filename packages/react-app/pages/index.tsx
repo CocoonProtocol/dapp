@@ -52,11 +52,12 @@ export default function App() {
     "activityLevel" : "Low",
     "link":"https://www.terra.money/"
 }];
+
   return (
     <AppLayout title="Cocoon Protocol" description="Cocoon Protocol">
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
-      {objects.map((object, i) =>
+      {cocoons.map((object , i) =>
 
         <Card sx={{ minWidth: 275, margin: "10px" }}>
           <CardContent>
@@ -78,9 +79,9 @@ export default function App() {
             <Button size="small" sx={{zIndex: 1}} href={object.link}>Learn More</Button>
           </CardActions>
         </Card>
-
       )}
       <br/><br/><br/>
+      {/* <Polling/> */}
       </Box>
     </AppLayout>
   );
