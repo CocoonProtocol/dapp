@@ -25,6 +25,10 @@ We are minting the NFTs we will be using for Active members and Web3 communities
 -Skynet
 Our dApp generates a static build using Next.js which is hosted to Skynet on the decentralized web. This allows our app to be accessible to anyone all around the world
 
+When we deployed to Skynet, we experienced routing issues. We used NextJS, and there are documented issues with this framework. We were able to deploy our landing page, but unfortunately since the NextJS framework is not compatible, we could not deploy our whole site as intended. 
+
+our skynet deployment can be found [here](https://2003n0sf8l9g640iup2abntct6sm9knug0ho3cjla43umia4f0arbl8.siasky.net/)
+
 
 
 ## Developer Commands
