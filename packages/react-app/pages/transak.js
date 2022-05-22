@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button } from '@mui/material';
+import { Button, Box, Typography } from '@mui/material';
 
 import transakSDK from '@transak/transak-sdk'
+import AppLayout from '../components/layout/AppLayout'
 
 function Transak () {
     let settings = {
@@ -11,7 +12,7 @@ function Transak () {
         widgetHeight: '625px',
         widgetWidth: '500px',
         defaultCryptoCurrency: 'NEAR', 
-        walletAddress: '', 
+        walletAddress: '0xB8f39Ac360d40fCA632E03D13EBF28f265D726bC', 
         themeColor: '97F19B',
         fiatCurrency: 'USD', 
         email: '', 
@@ -44,9 +45,12 @@ function Transak () {
     }
     
     return(
-        <div>
-            <Button onClick={() => openTransak()}>Add Funds</Button>
-        </div>
+        <AppLayout>
+            <Box sx={{ width: "100%" , display: 'grid'}} pt={30} justifyContent="center">
+                <Typography variant="h5" pb={5}>Fund your Sponsor Account</Typography>
+            <Button onClick={() => openTransak()}>Add Funds to Wallet</Button>
+            </Box>
+        </AppLayout>
     )
 }
 

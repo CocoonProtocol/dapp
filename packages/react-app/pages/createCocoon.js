@@ -13,9 +13,9 @@ import AppLayout from "@/components/layout/AppLayout";
 export default function Cocoon() {
   const router = useRouter()
   const [selectedImage, setSelectedImage] = useState(null);
-  return (<AppLayout>
-    <br/><br/><br/>
-    <Stack p={2} spacing={2}>
+  return (
+    <AppLayout>
+    <Stack p={10} spacing={4}>
       <Typography variant="h4">
         Create a Cocoon
     </Typography>
@@ -90,7 +90,7 @@ export default function Cocoon() {
   onClick={() => router.push('/cocoon-home')}
 >Submit</Button>
         </Stack>
-        <br/><br/><br/><br/><br/>
-</AppLayout>
+        </AppLayout>
+        
   );
 }

@@ -2,7 +2,7 @@ export default function Github(props: any) {
   return (
 <svg xmlns="http://www.w3.org/2000/svg"
 fill="black"
-class="bi bi-telegram"
+className="bi bi-telegram"
 viewBox="0 0 16 16"
 {...props}> <g>
 <path

@@ -118,11 +118,14 @@ export default function Wallet() {
         You're connected! 
     </Typography>
     <Typography variant="body1">
-    You can now continue to see the cocoons you are a part of based on the tokens/NFTs you hold.
+    You can now continue to view and participate in the cocoons you are a part of based on the tokens/NFTs you hold, or create a campaign as a sponsor organization.
     </Typography>
     <Button
               color="inherit"
-              variant="outlined" onClick={() => router.push('/')}>View your Cocoons</Button>
+              variant="outlined" onClick={() => router.push('/cocoons')}>View your Cocoons</Button>
+              <Button
+              color="inherit"
+              variant="outlined" onClick={() => router.push('/create-ad')}>Create a Campaign</Button>
               </>
               : null}
             </Stack>

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import * as React from "react";
-import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent, Chip } from "@mui/material";
+import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent, Chip, Stack } from "@mui/material";
 import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
 import { AccountInfo } from "@/components";
@@ -35,15 +35,19 @@ export default function App() {
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
       <h1 className="titlex">🐛Cocoon🦋</h1>
-      <p className="homebody">what is this app??????????????</p>
-      <p className="homebody">what is this app??????????????</p>
-      <p className="homebody">what is this app??????????????</p>
-      <p className="homebody">what is this app??????????????</p>
+      <Stack px={50} justifyContent="center">
+      <Typography variant="overline" display="block" gutterBottom>
+        Cocoon Protocol is a dApp to generate sustainable income for web3 communities.<br/>
+        Our platform allows sponsors to seamlessly connect with value-aligned organizations to attend events, hack on bounties, fulfill recruiting roles, and apply to scholarships all in one place.
+      </Typography>
+      </Stack>
       <br/>
+      <Stack px={50}>
       {buttons.map((object , i) =>
             <Button size="large" className="debutton" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>{object.name}</Button>
       )}
       <br/><br/><br/>
+      </Stack>
       {/* <Polling/> */}
       </Box>
     </AppLayout>
