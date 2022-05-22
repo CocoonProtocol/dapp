@@ -1,17 +1,10 @@
 // @ts-nocheck
 import React, {useState} from "react";
-import PropTypes from 'prop-types';
 import { Tabs, Tab, Typography, Box, Button, TextField, Stack, IconButton } from "@mui/material";
-import { WalletLinkConnector } from "@web3-react/walletlink-connector";
-import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-import { InjectedConnector } from "@web3-react/injected-connector";
-import { useWeb3React } from '@web3-react/core'
-import { useContractKit } from "@celo-tools/use-contractkit";
-import NearWalletSelector from "@near-wallet-selector/core";
-import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import Instagram from '@mui/icons-material/Instagram';
 import Twitter from '@mui/icons-material/Twitter';
 import Telegram from '@mui/icons-material/Telegram';
+import TitlebarImageList from "../components/TitleBarImageList";
 import Image from 'next/image'
 import blu3Logo from '../public/blu3logo.png'
 
@@ -83,7 +76,7 @@ export default function CocoonHome() {
           <Tab label="Jobs" {...a11yProps(3)} />
         </Tabs>
         <TabPanel value={value} index={0}>
-        Events
+        <TitlebarImageList/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Coming soon!

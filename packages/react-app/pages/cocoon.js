@@ -30,18 +30,32 @@ export default function Cocoon() {
           variant="filled"
         />
            <TextField id="filled-basic" label="Community Email" variant="filled" />
+           <Typography variant="h5">
+        Contract Addresses
+    </Typography>
+           <Typography variant="body1">
+        Select your chain and add the contract addresses that determine the whitelist for your cocoon. Anyone with an asset (NFT or token) from that contract is automatically whitelisted by Cocoon Protocol.
+    </Typography>
+    <Stack direction="row" spacing={4}>
+    <TextField id="filled-basic" label="NFT Contract Address" variant="filled" />
+    <TextField id="filled-basic" label="Token Contract Address" variant="filled" />
+    </Stack>
         <Typography variant="h5">
         Social Media
     </Typography>
-    <Stack direction="row" spacing={4}>
     <Typography variant="body1">
         Add the links to your social media accounts.
     </Typography>
+    <Stack direction="row" spacing={4}>
+    
     <TextField id="filled-basic" label="Telegram" variant="filled" />
     <TextField id="filled-basic" label="Discord" variant="filled" />
     <TextField id="filled-basic" label="Twitter" variant="filled" />
     <TextField id="filled-basic" label="Instagram" variant="filled" />
     </Stack>
+    <Typography variant="h5">
+        Customize your Cocoon Page
+    </Typography>
         <Button
   variant="filled"
   component="label"
@@ -56,8 +70,8 @@ export default function Cocoon() {
     }}
   />
 </Button>
-<Typography variant="h5">
-        Cocoon Logo
+<Typography variant="h6">
+        Your Cocoon Logo
     </Typography>
 {selectedImage && (
         <div>
