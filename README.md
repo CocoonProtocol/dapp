@@ -9,8 +9,9 @@ We are a DAO tooling platform to generate sustainable income for DAOs, using the
 
 -Transak
 We want to be inclusive to communities who are not yet onboard into crypto. For example, when we partner with local communities like Esquina de Abuela we want to provide an easy way to onramp from fiat current to cryptocurrency to start using our platform. 
-Coinbase Wallet
-We are looking to onboard the new generation of crypto users to utilize as a first line of payments, Coinbase Wallet makes it very easy
+
+-Coinbase Wallet
+We are looking to onboard the new generation of crypto users to utilize as a first line of payments, Coinbase Wallet makes it very easy for a user to create their first cryptocurrent wallet and begin using it immediately on Cocoon Protocol.
 
 -CELO
 We created an ERC-20 solidity contract deployed on CELO for our $COCO tokens with a total supply of 100 trillion. These tokens will serve as rewards to activate contributors in each cocoon. In addition, tokens will act as points to earn certain NFT badges. The more tokens you earn, the more limited edition badges you get, which grows your share of the DAO basic income. The main benefit of using CELO is that it is carbon-neutral and has 5 second finality.
@@ -37,5 +38,5 @@ Prerequisites:
 git clone https://github.com/celo-org/celo-progressive-dapp-starter
 ```
 
-[![Celo Progressive dApp Starter]([https://img.youtube.com/vi/MQg2sta0lr8/0.jpg)](https://youtu.be/MQg2sta0lr8](https://github.com/celo-org/celo-progressive-dapp-starter))
+https://github.com/celo-org/celo-progressive-dapp-starter
 
