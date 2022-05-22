@@ -35,7 +35,7 @@ export default function App() {
 <p>what is this app??????????????</p>
 <br/>
       {buttons.map((object , i) =>
-            <Button size="large" className=".MuiChip-root" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>View {object.link}</Button>
+            <Button size="large" className="debutton" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>View {object.link}</Button>
       )}
       <br/><br/><br/>
       {/* <Polling/> */}

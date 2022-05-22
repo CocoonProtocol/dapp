@@ -34,7 +34,7 @@ width: 100%;
   text-align: center;
 }
 /* purple  #9d94c0 */
-.MuiButton-root, .MuiChip-root {
+.debutton, .MuiChip-root {
   align-items: center;
   background-image: linear-gradient(135deg, #f06c9b 40%, #FD96A9);
   border: 0;
@@ -63,19 +63,19 @@ width: 100%;
   touch-action: manipulation;
 }
 
-.MuiButton-root:active ,.MuiChip-root:active {
+.debutton:active ,.MuiChip-root:active {
   outline: 0;
 }
 
-.MuiButton-root:hover, .MuiChip-root:hover {
+.debutton:hover, .MuiChip-root:hover {
   outline: 0;
 }
 
-.MuiButton-root, .MuiChip-root span {
+.debutton, .MuiChip-root span {
   transition: all 200ms;
 }
 
-.MuiButton-root:hover, .MuiChip-root:hover span {
+.debutton:hover, .MuiChip-root:hover span {
   transform: scale(.9);
   opacity: .75;
 }
