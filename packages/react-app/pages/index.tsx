@@ -42,7 +42,7 @@ export default function App() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" sx={{zIndex: 1}}>Learn More</Button>
+            <Button size="small" sx={{zIndex: 1, backgroundColor: "#69cd9e", color: "black"}}>Learn More</Button>
           </CardActions>
         </Card>
 

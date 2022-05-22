@@ -1,26 +1,23 @@
 import * as React from "react";
 import { Link } from "@mui/material";
 import Github from "@/public/Github";
-import Discord from "@/public/Discord";
-
+import Telegram from "@/public/Telegram";
+import Twitter from "@/public/Twitter";
 export default function Footer() {
   const githubLink =
     "https://github.com/cocoonprotocol/dapp";
-  const discordLink = "https://discord.gg/cGCE9p9352";
-
+  const telegramLink = "https://t.me/+p4j2f6AH9n4zYmEx";
+  const twitterLink = "https://twitter.com/cocoonprotocol";
   return (
     <footer style={{ textAlign: "center" }}>
       <Link href={githubLink} target="_blank">
         <Github style={{ width: "40px", margin: "5px" }} />
       </Link>
-      <Link href={discordLink} target="_blank">
-        <Discord style={{ width: "40px", margin: "5px" }} />
+      <Link href={twitterLink} target="_blank">
+        <Twitter style={{ width: "40px", margin: "5px" }} />
       </Link>
-      <Link href={discordLink} target="_blank">
-        <Discord style={{ width: "40px", margin: "5px" }} />
-      </Link>
-      <Link href={discordLink} target="_blank">
-        <Discord style={{ width: "40px", margin: "5px" }} />
+      <Link href={telegramLink} target="_blank">
+        <Telegram style={{ width: "40px", margin: "5px" }} />
       </Link>
     </footer>
   );

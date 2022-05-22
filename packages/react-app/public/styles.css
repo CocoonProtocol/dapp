@@ -1,6 +1,6 @@
 /* CSS */
 .MuiToolbar-root{
-  background-color: #2CC970;
+  background-color: #fff0d6!important;
   color: black
 }
 
@@ -18,9 +18,11 @@ footer {
 position: fixed!important;
 bottom: 0;
 z-index: 2;
-background-color: #47D785!important;
+background-color: #fff0d6!important;
 width: 100%;
 }
+
+/* purple  #9d94c0 */
 .MuiChip-root {
   align-items: center;
   background-image: linear-gradient(135deg, #f06c9b 40%, #FD96A9);
@@ -64,4 +66,14 @@ width: 100%;
 .MuiChip-root:hover span {
   transform: scale(.9);
   opacity: .75;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
 }
