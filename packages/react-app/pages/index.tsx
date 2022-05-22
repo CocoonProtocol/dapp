@@ -8,11 +8,6 @@ import AppLayout from "@/components/layout/AppLayout";
 import { useRouter } from 'next/router'
 
 
-
-
-
-
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -47,72 +42,13 @@ export default function App() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" sx={{zindex: -1}}>Learn More</Button>
+            <Button size="small" sx={{zIndex: 1}}>Learn More</Button>
           </CardActions>
         </Card>
 
       )}
-
-<<<<<<< Updated upstream
-
-  return (
-    <AppLayout title="Celo Starter" description="Celo Starter">
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs variant="scrollable" scrollButtons allowScrollButtonsMobile value={value} onChange={handleChange} aria-label="basic tabs">
-            <Tab label="Account" {...a11yProps(0)} />
-            <Tab label="Storage" {...a11yProps(1)} />
-            <Tab label="Greeter" {...a11yProps(2)} />
-            {/* <Tab label="Wallet" {...a11yProps(3)} /> */}
-          </Tabs>
-        </Box>
-        <TabPanel value={value} index={0}>
-          <AccountInfo></AccountInfo>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <StorageContract contractData={contracts?.Storage} />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <GreeterContract contractData={contracts?.Greeter} />
-        </TabPanel>
-        {/* <TabPanel value={value} index={3}>
-          <Wallet></Wallet>
-        </TabPanel> */}
+      <br/><br/><br/>
       </Box>
-      <button type="button" onClick={() => router.push('/cocoon')}>
-      Click me
-    </button>
-      <Polling/>
-=======
-      </Box>
->>>>>>> Stashed changes
     </AppLayout>
   );
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography component="div">{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
 }

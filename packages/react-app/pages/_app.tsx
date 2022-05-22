@@ -10,13 +10,9 @@ import { CustomThemeProvider } from "@/contexts/userTheme";
 import { Provider } from "react-redux"
 import store from "@/state/index"
 import AppUpdater from "@/state/app/updater"
-<<<<<<< Updated upstream
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
-=======
 import '../public/styles.css'
-
->>>>>>> Stashed changes
 
 function Updaters() {
   return (
