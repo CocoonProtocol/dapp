@@ -27,7 +27,7 @@ NFT Image: https://demo.storj-ipfs.com/ipfs/QmbuyCS7AACDKepon9v76xqK48nFfvVLLwU3
 NFT Metadata: https://demo.storj-ipfs.com/ipfs/QmcgjW87uThVxnfgBrvHBK5TpPgdYcN9skL1eozXUgAMSy
 
 -NEAR
-We are minting the NFTs we will be using for Active members and Web3 communities using Near Protocol, this will have governance features in the near future.
+We are minting the NFTs we will be using for Active members and Web3 communities using Near Protocol, this will have governance features in the near future. With @NEARProtocol we are able to be more inclusive to Women in Web 3.0. We’ve build the first test cocoon for in our MVP for @blu3dao, which is on a mission to empower women to learn, earn and play in the web3 space. Cocoon Protocol fulfills all three of these mandates. Users are able to attend educational events, earn $COCO tokens which increase their DBI income share, apply and interview for jobs, find scholarships, go to social events, all while earning money just for being active in these areas. In addition, it allows women to find other web3 communities which are social impact focused. In the future we will build an interactive map that allows users to discover Cocoon campaigns happening all over the world. Social impact DAOs and communities like @blu3dao,  @_herdao, @wbw3, @minorityprogram, @BlackLeadersDAO, will be able to use the Cocoon Protocol platform for free, forever.
 
 NFT Cocoon Membership Badge: https://testnet.paras.id/token/paras-token-v2.testnet::1405/1405:1
 
