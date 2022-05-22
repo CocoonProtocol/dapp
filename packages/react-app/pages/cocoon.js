@@ -6,8 +6,6 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { InjectedConnector } from "@web3-react/injected-connector";
 import { useWeb3React } from '@web3-react/core'
 import { useContractKit } from "@celo-tools/use-contractkit";
-import NearWalletSelector from "@near-wallet-selector/core";
-import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import { useRouter } from 'next/router'
 
 
@@ -47,7 +45,7 @@ export default function Cocoon() {
         Add the links to your social media accounts.
     </Typography>
     <Stack direction="row" spacing={4}>
-    
+
     <TextField id="filled-basic" label="Telegram" variant="filled" />
     <TextField id="filled-basic" label="Discord" variant="filled" />
     <TextField id="filled-basic" label="Twitter" variant="filled" />
@@ -86,6 +84,6 @@ export default function Cocoon() {
   onClick={() => router.push('/cocoon-home')}
 >Submit</Button>
         </Stack>
-        
+
   );
 }
