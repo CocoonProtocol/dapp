@@ -1,9 +1,9 @@
-// @ts-nocheck
+/ @ts-nocheck
 import * as React from "react";
 import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent } from "@mui/material";
 import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
-import { AccountInfo } from "@/components";
+import { StorageContract, GreeterContract, AccountInfo } from "@/components";
 import AppLayout from "@/components/layout/AppLayout";
 import { useRouter } from 'next/router'
 import { oneOf } from "prop-types";
@@ -52,11 +52,12 @@ export default function App() {
     "activityLevel" : "Low",
     "link":"https://www.terra.money/"
 }];
+
   return (
     <AppLayout title="Cocoon Protocol" description="Cocoon Protocol">
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
-      {objects.map((object, i) =>
+      {cocoons.map((object , i) =>
 
         <Card sx={{ minWidth: 275, margin: "10px" }}>
           <CardContent>
@@ -78,7 +79,6 @@ export default function App() {
             <Button size="small" sx={{zIndex: 1}} href={object.link}>Learn More</Button>
           </CardActions>
         </Card>
-
       )}
       <br/><br/><br/>
       </Box>
