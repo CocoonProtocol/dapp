@@ -15,13 +15,13 @@ const CoinbaseWallet = new WalletLinkConnector({
     appName: "Web3-react Demo",
     supportedChainIds: [1, 3, 4, 5, 42],
    });
-   
+
    const WalletConnect = new WalletConnectConnector({
     rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
     bridge: "https://bridge.walletconnect.org",
     qrcode: true,
    });
-   
+
    const Injected = new InjectedConnector({
     supportedChainIds: [1, 3, 4, 5, 42]
    });
@@ -35,15 +35,15 @@ export default function Wallet() {
   return (
     <AppLayout>
         <Box sx={{ width: "100%" , display: 'grid'}}>
-            
-            <Stack p={40} gap={2}>
+
+            <Stack p={2} gap={2}>
             <Typography variant="h5">
         Connect or Create your Wallet
     </Typography>
     <Typography variant="body1">
         The easiest way to get up an running with Cocoon is to create or login with Coinbase Wallet.
     </Typography>
-            
+
           <Button
               color="inherit"
               variant="outlined" onClick={() => { activate(CoinbaseWallet) }}>
@@ -53,7 +53,7 @@ export default function Wallet() {
               width="25px"
               height="25px"
               borderRadius="3px"/>
-                  
+
                   Coinbase Wallet</Button>
 <Button
               color="inherit"
@@ -103,7 +103,7 @@ export default function Wallet() {
               height="25px"
               borderRadius="3px"
             />
-                  
+
                   Metamask</Button>
 <Typography variant="h5">
         Wallet Info
@@ -112,10 +112,10 @@ export default function Wallet() {
     <div>{`Account: ${account}`}</div>
     <div>{`Network ID: ${chainId}`}</div>
 
-    {active ? 
+    {active ?
     <>
     <Typography variant="h5">
-        You're connected! 
+        You're connected!
     </Typography>
     <Typography variant="body1">
     You can now continue to view and participate in the cocoons you are a part of based on the tokens/NFTs you hold, or create a campaign as a sponsor organization.

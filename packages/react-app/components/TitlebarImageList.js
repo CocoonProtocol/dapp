@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import { Tabs, Tab, Typography, Box, Button, TextField, Stack, IconButton, Modal } from "@mui/material";
-import { CocoContext } from '../components/layout/AppLayout';
+import { CocoContext } from './layout/AppLayout';
 
 const style = {
     position: 'absolute',
@@ -22,25 +22,10 @@ export default function TitlebarImageList() {
     const [open, setOpen] = React.useState(false);
 
     const { coco, setCoco, handleCocoChange } = React.useContext(CocoContext);
-    const speed = 200;
 
-    const updateCount = () => {
-        const target = coco + 10;
-        const count = coco;
-    
-        const increment = target / speed;
-    
-        if (count < target) {
-          setCoco(count + increment);
-          setTimeout(updateCount, 100);
-        } else {
-          // count.innerText = target;
-        }
-      };
-    
+
   const handleOpen = () => {
-      setOpen(true) 
-      updateCount()
+      setOpen(true)
 } ;
   const handleClose = () => {
       setOpen(false);
@@ -48,9 +33,6 @@ export default function TitlebarImageList() {
 
   return (
     <ImageList sx={{ width: 900, height: 900 }} cols={1} rowHeight={450} gap={70}>
-      {/* <ImageListItem key="Subheader" sx={{ width: 700, height: 100 }} gap={10}>
-        <ListSubheader component="div">May</ListSubheader>
-      </ImageListItem> */}
        <Modal
         open={open}
         onClose={handleClose}

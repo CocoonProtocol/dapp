@@ -15,12 +15,12 @@ export default function CreateCampaign() {
   const [selectedImage, setSelectedImage] = useState(null);
   return (
       <AppLayout>
-    <Stack p={30} spacing={4}>
+    <Stack p={2} spacing={2}>
       <Typography variant="h4">
         Create a Campaign
     </Typography>
     <Typography variant="body1">
-    The interests of everyone in the Web3 world can be super broad. How do you make sure your targeted audience for a campaign is the one that will actually want/need your product/ service?  
+    The interests of everyone in the Web3 world can be super broad. How do you make sure your targeted audience for a campaign is the one that will actually want/need your product/ service?
 That’s where Cocoon Project jumps in, we have targeted Web3 communities to make your job easier, we keep them engaged with our platform and provide you with their engagement stats and attendance to your events.
     </Typography>
     <TextField id="filled-basic" label="Name of Campaign" variant="filled" />
