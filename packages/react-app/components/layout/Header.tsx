@@ -23,7 +23,7 @@ export function Header() {
       <AppBar position="static">
         <Toolbar sx={{ gap: { md: 2, xs: 0.5 } }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Celo Dapp Starter
+            Cocoon 🐛🦋
           </Typography>
           {network && <Chip label={network.name} color="secondary" />}
           {address && (
@@ -34,13 +34,7 @@ export function Header() {
                 onDelete={destroy}
                 sx={{ mx: 1 }}
               />
-              {windowDimensions.width >= 600 ? (
-                <Button variant="outlined" color="inherit" onClick={destroy}>
-                  Disconnect
-                </Button>
-              ) : (
-                ""
-              )}
+
             </>
           )}
           {!address && (
@@ -52,11 +46,6 @@ export function Header() {
               Connect wallet
             </Button>
           )}
-          <ThemeSwitcher
-            sx={{ m: 1 }}
-            onChange={e => setTheme(e.target.checked)}
-            checked={theme}
-          />
         </Toolbar>
       </AppBar>
     </Box>

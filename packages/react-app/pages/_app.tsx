@@ -10,8 +10,13 @@ import { CustomThemeProvider } from "@/contexts/userTheme";
 import { Provider } from "react-redux"
 import store from "@/state/index"
 import AppUpdater from "@/state/app/updater"
+<<<<<<< Updated upstream
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
+=======
+import '../public/styles.css'
+
+>>>>>>> Stashed changes
 
 function Updaters() {
   return (
@@ -31,10 +36,10 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
       <CustomThemeProvider>
         <ContractKitProvider
           dapp={{
-            name: "use-contractkit demo",
-            description: "A demo DApp to showcase functionality",
-            url: "https://use-contractkit.vercel.app",
-            icon: "https://use-contractkit.vercel.app/favicon.ico",
+            name: "Cocoon Protocol Demo",
+            description: "A demo DApp to showcase Cocoon Protocol",
+            url: "https://cocoonprotocol.vercel.app",
+            icon: "https://cocoonprotocol.vercel.app/favicon.ico",
           }}
           network={Alfajores}
           // networks={[Mainnet, Alfajores]}

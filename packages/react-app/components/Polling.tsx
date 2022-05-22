@@ -72,7 +72,7 @@ export function Polling() {
   return (
     currentBlock ? (<Box sx={{ margin: "10px", position: "fixed", bottom: "0", right: "0" }}>
       <div style={{ display: "inline-block", marginRight: "4px", fontSize: "12px" }}>
-        <span>{currentBlock}</span>
+        <span>Block: {currentBlock}</span>
       </div>
       <FadeIcon in={!isMounting}/>
     </Box>) : null
