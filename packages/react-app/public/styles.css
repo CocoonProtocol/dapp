@@ -25,15 +25,22 @@ z-index: 2;
 background-color: #fff0d6!important;
 width: 100%;
 }
-
+.titlex{
+  flex-grow: 1!important;
+  color: #3185fc!important;
+  text-shadow: #FD96A9 1.5px 1.5px 1.5px!important;
+  font-size: 3rem!important;
+  margin: 1rem;
+  text-align: center;
+}
 /* purple  #9d94c0 */
-.MuiChip-root {
+.MuiButton-root, .MuiChip-root {
   align-items: center;
   background-image: linear-gradient(135deg, #f06c9b 40%, #FD96A9);
   border: 0;
   border-radius: 10px;
   box-sizing: border-box;
-  color: black!important;
+  color: black;
   cursor: pointer;
   /* display: flex;s */
   /* flex-direction: column; */
@@ -41,6 +48,7 @@ width: 100%;
   /* font-size: 16px; */
   /* font-weight: 700; */
   /* height: 54px; */
+  margin: 5px!important;
   justify-content: center;
   letter-spacing: .4px;
   /* line-height: 1; */
@@ -55,19 +63,19 @@ width: 100%;
   touch-action: manipulation;
 }
 
-.MuiChip-root:active {
+.MuiButton-root:active ,.MuiChip-root:active {
   outline: 0;
 }
 
-.MuiChip-root:hover {
+.MuiButton-root:hover, .MuiChip-root:hover {
   outline: 0;
 }
 
-.MuiChip-root span {
+.MuiButton-root, .MuiChip-root span {
   transition: all 200ms;
 }
 
-.MuiChip-root:hover span {
+.MuiButton-root:hover, .MuiChip-root:hover span {
   transform: scale(.9);
   opacity: .75;
 }

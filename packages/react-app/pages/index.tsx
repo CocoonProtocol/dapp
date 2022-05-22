@@ -18,25 +18,24 @@ interface TabPanelProps {
 export default function App() {
   const router = useRouter()
   const { network } = useContractKit();
-  const buttons = [{
-    "communityName" : "Blu3 DAO",
-    "activeMembers" : "679",
-    "icon" : "blu3logo.png",
-    "comunityAttributes" : ["womxn", "allies"] ,
-    "activityLevel" : "High",
-    "link":"https://blu3tofly.notion.site/blu3tofly/Blu3-DAO-Overview-Deliverables-95e78e4727174b399915ca42ef9cd608",
-    "colorx": "#4EC4CC",
-    "color": "#000"
-
-},];
+  const buttons = [
+    {"link" : "cocoons"},
+    {"link" : "sponsors"},
+    {"link" : "feed"},
+  ];
 
   return (
     <AppLayout title="Cocoon Protocol" description="Cocoon Protocol">
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
+      <h1 className="titlex">🐛Cocoon🦋</h1>
+      <p>what is this app??????????????</p>
+<p>what is this app??????????????</p>
+<p>what is this app??????????????</p>
+<p>what is this app??????????????</p>
+<br/>
       {buttons.map((object , i) =>
-            <Button size="large" sx={{width: "100%", zIndex: 1, backgroundColor: [object.colorx], color: [object.color]}} href={"cocoon/"+String(object.communityName)}>View {object.communityName} Cocoon</Button>
-
+            <Button size="large" className=".MuiChip-root" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>View {object.link}</Button>
       )}
       <br/><br/><br/>
       {/* <Polling/> */}
