@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import Meta from "../meta/Meta";
 import Footer from "./Footer";

@@ -30,9 +30,9 @@ export function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#3185fc", textShadow: "#FD96A9 .5px .5px .5px" }}>
             Cocoon 🐛🦋
           </Typography>
-          <span>$COCO:</span>
+
           <Chip
-                label={<CountUp start={coco} end={coco + 10}/>}
+                label={<><span>$COCO:</span><CountUp start={coco} end={coco + 10}/></>}
                 color="secondary"
               />
           {address && (
