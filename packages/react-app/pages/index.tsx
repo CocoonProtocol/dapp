@@ -35,14 +35,14 @@ export default function App() {
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
       <h1 className="titlex">🐛Cocoon🦋</h1>
-      <Stack px={50} justifyContent="center">
+      <Stack justifyContent="center">
       <Typography variant="overline" display="block" gutterBottom>
         Cocoon Protocol is a dApp to generate sustainable income for web3 communities.<br/>
         Our platform allows sponsors to seamlessly connect with value-aligned organizations to attend events, hack on bounties, fulfill recruiting roles, and apply to scholarships all in one place.
       </Typography>
       </Stack>
       <br/>
-      <Stack px={50}>
+      <Stack>
       {buttons.map((object , i) =>
             <Button size="large" className="debutton" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>{object.name}</Button>
       )}
