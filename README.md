@@ -23,6 +23,7 @@ $COCO Mint Transaction: https://alfajores-blockscout.celo-testnet.org/tx/0xa910c
 We are using Storj’s decentralized NFT storage with IPFS pinning to house our Cocoon proof of membership NFT badge images and metadata. This makes our NFTs more performant and secure. The main benefit of using Storj is that storing the asset is truly decentralized across thousands of nodes around the world rather than in centralized data centers like AWS or GCP.
 
 NFT Image: https://demo.storj-ipfs.com/ipfs/QmbuyCS7AACDKepon9v76xqK48nFfvVLLwU39eM1miMYVg
+
 NFT Metadata: https://demo.storj-ipfs.com/ipfs/QmcgjW87uThVxnfgBrvHBK5TpPgdYcN9skL1eozXUgAMSy
 
 -NEAR
