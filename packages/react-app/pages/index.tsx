@@ -1,7 +1,6 @@
 // @ts-nocheck
 import * as React from "react";
 import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent, Chip, Stack } from "@mui/material";
-import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
 import { AccountInfo } from "@/components";
 import AppLayout from "@/components/layout/AppLayout";

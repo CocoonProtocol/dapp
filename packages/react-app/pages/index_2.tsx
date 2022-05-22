@@ -1,23 +1,55 @@
-// @ts-nocheck
+/ @ts-nocheck
 import * as React from "react";
-import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent, Chip } from "@mui/material";
+import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent } from "@mui/material";
 import { useContractKit } from "@celo-tools/use-contractkit";
-import { AccountInfo } from "@/components";
+import { StorageContract, GreeterContract, AccountInfo } from "@/components";
 import AppLayout from "@/components/layout/AppLayout";
 import { useRouter } from 'next/router'
 import { oneOf } from "prop-types";
-import { cocoons } from "@/components/cocoon_list.js"
+
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-
-export default function App() {
+xport default function App() {
   const router = useRouter()
   const { network } = useContractKit();
+  const cocoons = [{
+    "communityName" : "Blu3 DAO",
+    "activeMembers" : "679",
+    "icon" : "blu3logo.png",
+    "comunityAttributes" : ["womxn", "allies"] ,
+    "activityLevel" : "High",
+    "link":"https://blu3tofly.notion.site/blu3tofly/Blu3-DAO-Overview-Deliverables-95e78e4727174b399915ca42ef9cd608"
 
+},
+{
+    "communityName" : "Esquina De La Abuela",
+    "activeMembers" : "209",
+    "icon" : null,
+    "comunityAttributes" : ["miami", "irl"] ,
+    "activityLevel" : "Medium",
+    "link":null
+
+},
+{
+    "communityName" : "BluntDAO",
+    "activeMembers" : "140",
+    "icon" : "bluntdao.png",
+    "comunityAttributes" : ["weed", "lol"] ,
+    "activityLevel" : "High" ,
+    "link":"https://www.bluntdao.com/"
+},
+{
+    "communityName" : "Developer DAO",
+    "activeMembers" : "9486",
+    "icon" : "",
+    "comunityAttributes" : ["de-fi", "lol"] ,
+    "activityLevel" : "Low",
+    "link":""
+}];
 
   return (
     <AppLayout title="Cocoon Protocol" description="Cocoon Protocol">
@@ -34,7 +66,7 @@ export default function App() {
              {object.communityName}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {object.comunityAttributes.map((attrs) => <Chip sx={{margin: "5px"}}label = {attrs} />)}
+              {object.comunityAttributes}
             </Typography>
             <Typography variant="body2">
               Members: {object.activeMembers}
@@ -42,12 +74,11 @@ export default function App() {
             <img src={object.icon}/>
           </CardContent>
           <CardActions>
-            <Button size="large" sx={{width: "100%", zIndex: 1, backgroundColor: [object.colorx], color: [object.color]}} href={"cocoon/"+String(object.communityName)}>View {object.communityName} Cocoon</Button>
+            <Button size="small" sx={{zIndex: 1}} href={object.link}>Learn More</Button>
           </CardActions>
         </Card>
       )}
       <br/><br/><br/>
-      {/* <Polling/> */}
       </Box>
     </AppLayout>
   );
