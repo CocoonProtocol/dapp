@@ -1,6 +1,6 @@
 // @ts-nocheck
 import * as React from "react";
-import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent } from "@mui/material";
+import { Tabs, Tab, Typography, Box, Card, CardActions, Button, CardContent, Chip } from "@mui/material";
 import deployedContracts from "@celo-progressive-dapp-starter/hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
 import { AccountInfo } from "@/components";
@@ -24,16 +24,20 @@ export default function App() {
     "icon" : "blu3logo.png",
     "comunityAttributes" : ["womxn", "allies"] ,
     "activityLevel" : "High",
-    "link":"https://blu3tofly.notion.site/blu3tofly/Blu3-DAO-Overview-Deliverables-95e78e4727174b399915ca42ef9cd608"
+    "link":"https://blu3tofly.notion.site/blu3tofly/Blu3-DAO-Overview-Deliverables-95e78e4727174b399915ca42ef9cd608",
+    "colorx": "#4EC4CC",
+    "color": "#000"
 
 },
 {
     "communityName" : "Esquina De La Abuela",
     "activeMembers" : "209",
-    "icon" : null,
+    "icon" : "eda.jpg",
     "comunityAttributes" : ["miami", "irl"] ,
     "activityLevel" : "Medium",
-    "link":null
+    "link":"https://esquinadeabuela.com/",
+    "colorx": "#185860",
+    "color": "#fff"
 
 },
 {
@@ -42,15 +46,28 @@ export default function App() {
     "icon" : "bluntdao.png",
     "comunityAttributes" : ["weed", "lol"] ,
     "activityLevel" : "High" ,
-    "link":"https://www.bluntdao.com/"
+    "link":"https://www.bluntdao.com/",
+    "colorx": "#4EC4CC",
+    "color": "#000"
+},{
+  "communityName" : "ArchiDAO",
+  "activeMembers" : "322",
+  "icon" : "archidao.png",
+  "comunityAttributes" : ["metaverse", "infrastructure"] ,
+  "activityLevel" : "Medium",
+  "link":"https://www.archidao.io/",
+  "colorx": "black",
+  "color": "white"
 },
 {
-    "communityName" : "Luna Holders",
-    "activeMembers" : "9486",
-    "icon" : "luna.jpeg",
-    "comunityAttributes" : ["de-fi", "lol"] ,
-    "activityLevel" : "Low",
-    "link":"https://www.terra.money/"
+  "communityName" : "Developer DAO",
+  "activeMembers" : "9486",
+  "icon" : "devdao.jpg",
+  "comunityAttributes" : ["devs", "infrastructure"] ,
+  "activityLevel" : "Low",
+  "link":"https://www.developerdao.com/",
+  "colorx": "#6A4E97",
+  "color": "#fff"
 }];
 
   return (
@@ -68,7 +85,7 @@ export default function App() {
              {object.communityName}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {object.comunityAttributes}
+              {object.comunityAttributes.map((attrs) => <Chip sx={{margin: "5px"}}label = {attrs} />)}
             </Typography>
             <Typography variant="body2">
               Members: {object.activeMembers}
@@ -76,7 +93,7 @@ export default function App() {
             <img src={object.icon}/>
           </CardContent>
           <CardActions>
-            <Button size="small" sx={{zIndex: 1}} href={object.link}>Learn More</Button>
+            <Button size="large" sx={{width: "100%", zIndex: 1, backgroundColor: [object.colorx], color: [object.color]}} href={object.link}>Learn More About {object.communityName}</Button>
           </CardActions>
         </Card>
       )}

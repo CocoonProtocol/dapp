@@ -27,7 +27,7 @@ export function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{ gap: { md: 2, xs: 0.5 } }}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#3185fc", textShadow: "#FD96A9 .5px .5px .5px" }}>
             Cocoon 🐛🦋
           </Typography>
           <span>$COCO:</span>
@@ -43,7 +43,6 @@ export function Header() {
                 onDelete={destroy}
                 sx={{ mx: 1 }}
               />
-
             </>
           )}
           {!address && (

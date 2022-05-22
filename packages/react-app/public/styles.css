@@ -3,12 +3,16 @@
   background-color: #fff0d6!important;
   color: black
 }
-
+.MuiPaper-root{
+  background-color: #ffffff50!important
+}
 html, body{
 background-color: #FFF6E7!important;
 color: #000000!important;
 }
-
+img {
+  max-width: 100%;
+}
 header {
 position: fixed!important;
 top: 0;
