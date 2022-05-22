@@ -37,6 +37,19 @@ Our dApp generates a static build using Next.js which is hosted to Skynet on the
 When we deployed to Skynet, we experienced routing issues. We used NextJS, and there are documented issues with this framework. We were able to deploy our landing page, but unfortunately since the NextJS framework is not compatible, we could not deploy our whole site as intended. 
 Skynet Deployment: https://2003n0sf8l9g640iup2abntct6sm9knug0ho3cjla43umia4f0arbl8.siasky.net/
 
+# Cocoon Protocol Information
+
+Mission Statement: https://medium.com/@cocoonprotocol/hey-there-we-are-cocoon-protocol-d1899902be6c
+
+Problem Statement: https://medium.com/@cocoonprotocol/cocoon-what-9c1eddd72444
+
+About Us: https://medium.com/@cocoonprotocol/we-are-a-dao-tooling-platform-to-generate-sustainable-income-for-daos-using-their-most-valued-53cc51930f7b
+
+DeFi on our Platform (Staking and Liquidity Pools): https://medium.com/@cocoonprotocol/staking-on-our-platform-6d3841bdaaf7
+
+Twitter: https://twitter.com/CocoonProtocol
+
+Telegram: https://t.me/+p4j2f6AH9n4zYmEx
 
 
 ## Developer Commands
