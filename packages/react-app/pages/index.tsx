@@ -93,7 +93,7 @@ export default function App() {
             <img src={object.icon}/>
           </CardContent>
           <CardActions>
-            <Button size="large" sx={{width: "100%", zIndex: 1, backgroundColor: [object.colorx], color: [object.color]}} href={object.link}>Learn More About {object.communityName}</Button>
+            <Button size="large" sx={{width: "100%", zIndex: 1, backgroundColor: [object.colorx], color: [object.color]}} href={"cocoon/"+String(object.communityName)}>View {object.communityName} Cocoon</Button>
           </CardActions>
         </Card>
       )}
