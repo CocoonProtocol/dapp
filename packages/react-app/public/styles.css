@@ -6,6 +6,13 @@
 .MuiPaper-root{
   background-color: #ffffff50!important
 }
+.homebody{
+  text-align: center;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 html, body{
 background-color: #FFF6E7!important;
 color: #000000!important;
@@ -40,7 +47,7 @@ width: 100%;
   border: 0;
   border-radius: 10px;
   box-sizing: border-box;
-  color: black;
+  color: black!important;
   cursor: pointer;
   /* display: flex;s */
   /* flex-direction: column; */

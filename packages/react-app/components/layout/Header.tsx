@@ -28,8 +28,8 @@ export function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{ gap: { md: 2, xs: 0.5 } }}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#3185fc", textShadow: "#FD96A9 .5px .5px .5px" }} href="/">
-            Cocoon
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#3185fc", textShadow: "#FD96A9 .5px .5px .5px" }} >
+            <a href="/">Cocoon</a>
           </Typography>
 
           <Chip

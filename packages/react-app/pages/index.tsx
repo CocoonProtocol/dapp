@@ -19,9 +19,15 @@ export default function App() {
   const router = useRouter()
   const { network } = useContractKit();
   const buttons = [
-    {"link" : "cocoons"},
-    {"link" : "sponsors"},
-    {"link" : "feed"},
+    {"link" : "cocoons",
+      "name" : "view cocoons"
+    },
+    {"link" : "createCocoon",
+      "name" : "create cocoon"
+    },
+    {"link" : "createCampaign",
+      "name" : "create campaign"
+    },
   ];
 
   return (
@@ -29,13 +35,13 @@ export default function App() {
       <Box sx={{ width: "100%" , display: 'grid'}}>
       <br/><br/><br/>
       <h1 className="titlex">🐛Cocoon🦋</h1>
-      <p>what is this app??????????????</p>
-<p>what is this app??????????????</p>
-<p>what is this app??????????????</p>
-<p>what is this app??????????????</p>
-<br/>
+      <p className="homebody">what is this app??????????????</p>
+      <p className="homebody">what is this app??????????????</p>
+      <p className="homebody">what is this app??????????????</p>
+      <p className="homebody">what is this app??????????????</p>
+      <br/>
       {buttons.map((object , i) =>
-            <Button size="large" className="debutton" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>View {object.link}</Button>
+            <Button size="large" className="debutton" sx={{width: "90%", zIndex: 1, left: "4%"}} href={String(object.link)}>{object.name}</Button>
       )}
       <br/><br/><br/>
       {/* <Polling/> */}
