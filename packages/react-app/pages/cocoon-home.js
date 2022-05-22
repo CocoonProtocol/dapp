@@ -7,6 +7,7 @@ import Telegram from '@mui/icons-material/Telegram';
 import TitlebarImageList from "../components/TitleBarImageList";
 import Image from 'next/image'
 import blu3Logo from '../public/blu3logo.png'
+import AppLayout from '../components/layout/AppLayout'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -43,6 +44,7 @@ export default function CocoonHome() {
     setValue(newValue);
   };
   return (
+    <AppLayout>
     <Stack p={10} spacing={4} justifyContent="center" alignItems="center">
       <Image
         src={blu3Logo}
@@ -88,6 +90,7 @@ export default function CocoonHome() {
       Coming soon!
       </TabPanel>
         </Stack>
+        </AppLayout>
         
   );
 }

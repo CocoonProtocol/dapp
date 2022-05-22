@@ -11,8 +11,12 @@ import { truncateAddress, getWindowDimensions } from "@/utils";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { useThemeContext } from "@/contexts/userTheme";
 import { useRouter } from 'next/router'
+import { CocoContext } from '../../components/layout/AppLayout';
+import CountUp from 'react-countup';
 
 export function Header() {
+  const { coco, setCoco, handleCocoChange } = React.useContext(CocoContext);
+
   const { address, network, connect, destroy, kit } = useContractKit();
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
@@ -26,7 +30,11 @@ export function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Cocoon 🐛🦋
           </Typography>
-          {network && <Chip label={network.name} color="secondary" />}
+          <span>$COCO:</span>
+          <Chip
+                label={<CountUp start={coco} end={coco + 10}/>}
+                color="secondary"
+              />
           {address && (
             <>
               <Chip

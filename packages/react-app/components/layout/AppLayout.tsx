@@ -10,13 +10,18 @@ interface Props {
   children: React.ReactNode;
 }
 
+export const CocoContext = React.createContext({coco: 0, setCoco:()=>{}});
+
 export default function AppLayout({ title, description, children }: Props) {
+
+  const [coco, setCoco] = React.useState(0);
+  const handleCocoChange = () => setCoco(coco + 1);
   return (
-    <div>
+    <CocoContext.Provider value={{ coco, setCoco, handleCocoChange }}>
       <Header />
       <Meta title={title} description={description} />
       {children}
       <Footer />
-    </div>
+    </CocoContext.Provider>
   );
 }
