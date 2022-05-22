@@ -49,8 +49,8 @@ export default function CocoonHome() {
       <Image
         src={blu3Logo}
         alt="Picture of the author"
-        width={100} 
-        height={100} 
+        width={100}
+        height={100}
         // blurDataURL="data:..." automatically provided
         // placeholder="blur" // Optional blur-up while loading
       />
@@ -91,6 +91,6 @@ export default function CocoonHome() {
       </TabPanel>
         </Stack>
         </AppLayout>
-        
+
   );
 }
