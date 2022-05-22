@@ -10,6 +10,7 @@ import { useContractKit } from "@celo-tools/use-contractkit";
 import { truncateAddress, getWindowDimensions } from "@/utils";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { useThemeContext } from "@/contexts/userTheme";
+import { useRouter } from 'next/router'
 
 export function Header() {
   const { address, network, connect, destroy, kit } = useContractKit();
@@ -17,7 +18,7 @@ export function Header() {
     getWindowDimensions()
   );
   const { theme, setTheme } = useThemeContext();
-
+  const router = useRouter()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -41,7 +42,7 @@ export function Header() {
             <Button
               color="inherit"
               variant="outlined"
-              onClick={() => connect().catch(e => console.log(e))}
+              onClick={() => router.push('/wallet')}
             >
               Connect wallet
             </Button>

@@ -19,8 +19,14 @@ const style = {
 
 export default function TitlebarImageList() {
     const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+    const [coco, setCoco] = React.useState(0);
+    
+  const handleOpen = () => {
+      setOpen(true) 
+} ;
+  const handleClose = () => {
+      setOpen(false);
+  }
 
   return (
     <ImageList sx={{ width: 900, height: 900 }} cols={1} rowHeight={450} gap={70}>
